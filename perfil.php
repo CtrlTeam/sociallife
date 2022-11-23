@@ -19,7 +19,7 @@
         <?php
             require("Model/acessaBD.php");
             session_start();
-            $dados = retornaDadosDoPerfil($_SESSION['username'], $_SESSION['password']);
+            $dados = retornaDadosDoPerfil($_SESSION['username']);
         ?>
         <div class="flex horizontal box"> 
             <img src="<?php echo "imagens/".$dados['foto'] ?>" alt="" style="width: 20%; height: 20%;" class="foto">
