@@ -21,11 +21,11 @@ body{
     background-color: white;
 }
 .box{
-    background-color: #8FB8ED;
+    background-color: white;
     padding: 2%;
     margin: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 20px  #7CF0BD;
+    /* box-shadow: 0 0 30px  #D4AFB9; */
     width: 80%;
 }
 .card{
@@ -43,21 +43,24 @@ form{
     margin: auto;
 }
 .button{
-    background-color:grey;
-    color: white;
+    background-color:#D4AFB9;
+    color: #363732;
     border-radius: 10px;
     padding: 20px;
     border: none;
     text-decoration: none;
 }
+
 .button:hover{
-    background-color: #404E7C;
+    background-color: #66C3FF;
+    transition: 0.8s;
 }
+
 #menu{
     width: 100%;
-    border: 1px solid white;
-    box-shadow: 0 5px 20px white;
-    background-color: #7CF0BD;
+    border: 3px solid #D4AFB9;
+    box-shadow: 0 5px 20px #363732;
+    background-color: #66C3FF;
 }
 ul{
     list-style: none;
@@ -92,7 +95,7 @@ li{
 }
 a{
     text-align: none;
-    color: black;
+    color: #000000;
 }
 a img{
     width: 18%;
@@ -105,4 +108,18 @@ a img{
 
 #logo{
     width: 7rem;
+}
+h1{
+    color: #262722;
+    font-family:'Lato', sans-serif;
+}
+H2{
+    color: #262722;
+    font-family:'Lato', sans-serif;
+    font-size: 30px;
+}
+p{
+    color: #262722;
+    font-family:'Lato', sans-serif;
+    font-size: 20px;
 }

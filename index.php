@@ -22,6 +22,9 @@
     <p>Não possui uma conta?</p>
     <a class="button" href="cadastro.php">CADASTRAR-SE</a>
     </div>
+    <div>
+        <img src="imagens/imagem_2022-11-23_183614281-removebg-preview.png" alt="">
+    </div>
  </div>
 </body>
 </html>
