@@ -123,3 +123,17 @@ p{
     font-family:'Lato', sans-serif;
     font-size: 20px;
 }
+.no-w{
+    word-break: break-all;
+}
+
+.post-img{
+    width: 4%;
+    min-height: 2.95rem;
+    min-width: 3rem;
+    margin-right: 1%;
+    border-radius: 100%;
+}
+.a-itens-c{
+    align-items: center;
+}

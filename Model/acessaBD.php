@@ -110,13 +110,18 @@ function exibePosts(){
     global $conexao;
     $query = $conexao->query("SELECT * FROM feed ORDER BY dateTime DESC;");
     while($row = $query->fetch(PDO::FETCH_OBJ)){
+        $usuario = retornaDadosDoPerfil($row->usernameCreator);
         $date = date_create($row->dateTime);
         $date = date_format($date, 'd/m/Y H:i:s');
+        $foto = $usuario['foto'];
+        if($usuario == "sem dados") 
+            $foto = "s.png";
         echo "<div class='flex vertical post'>";
-        echo "<div class='flex horizontal'>";
-        echo "<b style= 'padding-right: 10px'>$row->usernameCreator</b>
+        echo "<div class='flex horizontal a-itens-c'>";
+        echo "<img class='post-img' src='imagens/".$foto."' alt=''>";
+        echo "<b style='padding-right: 10px'>$row->usernameCreator</b>
         <i style='font-size: smaller;'>$date </i></div>";
-        echo "<p>$row->text</p>";
+        echo "<p class='no-w'>$row->text</p>";
         echo "</div>";
     }
 }
