@@ -16,12 +16,13 @@
 }
 body{
     font-family: 'Montserrat', 'Italic';
+    background-color: #00a7e1;
 }
 .fundo{
     background-color: white;
 }
 .box{
-    background-color: white;
+    background-color: #00a7e1;
     padding: 2%;
     margin: 20px;
     border-radius: 10px;
@@ -35,20 +36,22 @@ input{
     border: inset;
     padding: 20px;
     margin: 10px;
-    border-radius: 10px;
+    border-radius: 30px;
     font-weight: bold;
+    color: #00171f;
 }
 form{
     width: 80%;
     margin: auto;
 }
 .button{
-    background-color:#D4AFB9;
-    color: #363732;
-    border-radius: 10px;
+    background-color:#00171f;
+    color: white;
+    border-radius: 30px;
     padding: 20px;
     border: none;
     text-decoration: none;
+    text-align: center;
 }
 
 .button:hover{
@@ -113,13 +116,17 @@ h1{
     color: #262722;
     font-family:'Lato', sans-serif;
 }
-H2{
-    color: #262722;
-    font-family:'Lato', sans-serif;
-    font-size: 30px;
+h2{
+    color: white;
+    font-family:'Horizon' sans-serif;
+    font-size: 70px;
 }
 p{
     color: #262722;
     font-family:'Lato', sans-serif;
     font-size: 20px;
+}
+.link{
+    margin: 15px;
+    color: #00171f;
 }

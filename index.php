@@ -13,14 +13,16 @@
 <body>
     <div class="flex horizontal center">
         <div class="flex vertical center box card">
-        <h2>Entrar</h2>
+        <h2>Bem-Vindo</h2>
         <form action="Controller/Logar.php" method="post" class ="flex vertical">
-            <input type="text" name="username" id="username" placeholder="Nome de usuário">
-            <input type="password" name="password" id="password" placeholder="Senha">
-            <input class="button" type="submit" value="CONECTAR-SE">
+            <input type="text" name="username" id="username" placeholder="NOME DE USUÁRIO">
+            <input type="password" name="password" id="password" placeholder="SENHA">
+            <input class="button" type="submit" value="ENTRAR">
+            <div class="link">
+            <a href="#resetesuasenha" id="forgot-pass"><strong>ESQUECEU SUA SENHA?</strong></a>
+            </div>
+            <a class="button" href="cadastro.php">CADASTRE-SE</a>
     </form>
-    <p>Não possui uma conta?</p>
-    <a class="button" href="cadastro.php">CADASTRAR-SE</a>
     </div>
     <div>
         <img src="imagens/imagem_2022-11-23_183614281-removebg-preview.png" alt="">
