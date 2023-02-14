@@ -19,7 +19,7 @@ body{
     background-color: #00a7e1;
 }
 .fundo{
-    background-color: white;
+    background-color: #00a7e1;
 }
 .box{
     background-color: #00a7e1;
@@ -55,13 +55,12 @@ form{
 }
 
 .button:hover{
-    background-color: #66C3FF;
-    transition: 0.8s;
+    background-color: #1f2020;
+    transition: 0.6s;
 }
 
 #menu{
     width: 100%;
-    border: 3px solid #D4AFB9;
     box-shadow: 0 5px 20px #363732;
     background-color: #66C3FF;
 }
