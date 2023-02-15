@@ -19,14 +19,13 @@ body{
     background-color: #00a7e1;
 }
 .fundo{
-    background-color: #00a7e1;
+    background-color: #00171f;
 }
 .box{
     background-color: #00a7e1;
     padding: 2%;
     margin: 20px;
     border-radius: 10px;
-    /* box-shadow: 0 0 30px  #D4AFB9; */
     width: 80%;
 }
 .card{
@@ -61,8 +60,7 @@ form{
 
 #menu{
     width: 100%;
-    box-shadow: 0 5px 20px #363732;
-    background-color: #66C3FF;
+    background-color: #00a7e1;
 }
 ul{
     list-style: none;
