@@ -61,6 +61,7 @@ form{
 #menu{
     width: 100%;
     background-color: #00a7e1;
+    position: fixed;
 }
 ul{
     list-style: none;
@@ -127,3 +128,50 @@ p{
     margin: 15px;
     color: #00171f;
 }
+
+.container{
+    width: 100%;
+    min-width: 50vh;
+    padding:0;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+
+.Search-Bar{
+    width: 100%;
+    max-width: 400px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: baseline;
+    border-radius: 60px;
+    padding: 10px 20px;
+}
+
+.Search-Bar input{
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 24px 20px;
+    font-size: 20px;
+    color: #00171f;
+}
+
+::placeholder{
+    color: #00171f;
+}
+
+.Search-Bar button img{
+    width: 25px;
+}
+
+.Search-Bar button{
+    border: none;
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+

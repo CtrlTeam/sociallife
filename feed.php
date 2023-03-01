@@ -18,9 +18,9 @@
     <div class="flex vertical center"></div>
 
         <form action="Controller/Post.php" method="post" id="postForm">
-            <input type="text" name="post" id="post" placeholder="Digite sua mensagem...">
-            <input type="submit" value="Postar">
+            <input type="text" name="post" id="post" placeholder="DIGITE SUA MENSAGEM...">
         </form>
+            <input type="submit" value="PUBLICAR">
         
         <div class="flex vertical box">
             <?php 
