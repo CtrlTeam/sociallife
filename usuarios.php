@@ -20,7 +20,7 @@
 <!-- Não sei como pesquisar cada usuario então o google é só um exemplo -->
 
     <div class="container">
-        <form action="https://www.google.com/" class="Search-Bar">
+        <form action="https://www.google.com/search" method="get" class="Search-Bar">
             <input type="text" placeholder="Procure o Usuário..." name="bar">
             <button type="submit"> <img src="imagens/procurar.png">
 
