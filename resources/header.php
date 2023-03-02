@@ -3,16 +3,17 @@
         <img id="logo" src="imagens/android-chrome-192x192.png" alt="sociallife logo">
     </li>
     <li>
-        <a href="perfil.php"> <i class="bi bi-person-circle"></i>Perfil</a>
+        <a href="perfil.php"><img src="../imagens/home.png"></a>
     </li>
     <li>
-        <a href="feed.php"> <i class="bi bi-house-fill"></i> Feed</a>
+        <a href="feed.php"> <img src="../imagens/user.png"></a>
     </li>
     <li>
-        <a href="usuarios.php"> <i class="bi bi-person-lines-fill"></i> Usuários</a>
+        <a href="usuarios.php"> <img src="../imagens/multiple-users-silhouette.png"></a>
+
     </li>
     <li>
-        <a href="resources/sair.php"><i class="bi bi-door-open"></i>Sair</a>
+        <a href="resources/sair.php"> <img src="../imagens/exit.png"></a>
     </li>
     
 </ul>
