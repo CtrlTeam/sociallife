@@ -30,23 +30,24 @@
          if ($query->rowCount()>0){
             header('Location:'.'../cadastro.php?erro=3');
             die();
-            // return false;
+        }
+        $hash = password_hash($password,  PASSWORD_DEFAULT);
+
+        $stm = $conexao->prepare
+        ("INSERT INTO user(username, password, email, dtNasc, foto)
+        VALUES (:username, :password, :email, :dtNasc, :foto) ");
+
+        $stm->bindParam(':username', $username);
+        $stm->bindParam(':password', $hash);
+        $stm->bindParam(':email', $email);
+        $stm->bindParam(':dtNasc', $dtnasc);
+        $stm->bindParam(':foto', $foto);
+
+        $stm->execute();
+
+        echo "Cadastro realizado com sucesso";
+        return true;
     }
-    $stm = $conexao->prepare
-    ("INSERT INTO user(username, password, email, dtNasc, foto)
-    VALUES (:username, :password, :email, :dtNasc, :foto) ");
-
-    $stm->bindParam(':username', $username);
-    $stm->bindParam(':password', $password);
-    $stm->bindParam(':email', $email);
-    $stm->bindParam(':dtNasc', $dtnasc);
-    $stm->bindParam(':foto', $foto);
-
-    $stm->execute();
-
-    echo "Cadastro realizado com sucesso";
-    return true;
-}
 
 function insereNovoPost($username, $post){ 
     global $conexao;
@@ -67,16 +68,19 @@ function insereNovoPost($username, $post){
 
 function confereCadastro($username, $password){
     global $conexao;
-    $query = $conexao->query("SELECT username, password
-    FROM user WHERE username='$username' AND password='$password'");
-    return ($query->rowCount()>0);
+    $query = $conexao->query("SELECT username, password FROM user WHERE username='$username'");
+    if($query->rowCount()>0){
+        while($row = $query->fetch(PDO::FETCH_OBJ)){
+            return password_verify($password, $row->password);
+        }
+    } else return false;
 }
 
-function retornaDadosDoPerfil($username, $password){
+function retornaDadosDoPerfil($username){
     global $conexao;
     $dadosPerfil="sem dados";
     $query = $conexao->query("SELECT * FROM user 
-    WHERE username='$username' AND password='$password'");
+    WHERE username='$username'");
     while($row = $query->fetch(PDO::FETCH_OBJ)){
         $dadosPerfil = array(
             "username"=>$row->username,
@@ -106,13 +110,18 @@ function exibePosts(){
     global $conexao;
     $query = $conexao->query("SELECT * FROM feed ORDER BY dateTime DESC;");
     while($row = $query->fetch(PDO::FETCH_OBJ)){
+        $usuario = retornaDadosDoPerfil($row->usernameCreator);
         $date = date_create($row->dateTime);
         $date = date_format($date, 'd/m/Y H:i:s');
+        $foto = $usuario['foto'];
+        if($usuario == "sem dados") 
+            $foto = "s.png";
         echo "<div class='flex vertical post'>";
-        echo "<div class='flex horizontal'>";
-        echo "<b style= 'padding-right: 10px'>$row->usernameCreator</b>
+        echo "<div class='flex horizontal a-itens-c'>";
+        echo "<img class='post-img' src='imagens/".$foto."' alt=''>";
+        echo "<b style='padding-right: 10px'>$row->usernameCreator</b>
         <i style='font-size: smaller;'>$date </i></div>";
-        echo "<p>$row->text</p>";
+        echo "<p class='no-w'>$row->text</p>";
         echo "</div>";
     }
 }

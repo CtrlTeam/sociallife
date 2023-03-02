@@ -18,7 +18,8 @@
     <div class="flex vertical center"></div>
 
         <form action="Controller/Post.php" method="post" id="postForm">
-            <input type="text" name="post" id="post" placeholder="DIGITE SUA MENSAGEM...">
+
+            <input required type="text" name="post" id="post" placeholder="DIGITE SUA MENSAGEM...">
         </form>
             <input type="submit" value="PUBLICAR">
         
