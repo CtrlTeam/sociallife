@@ -31,7 +31,7 @@
                         $texto .= 'Nome de usuário não pode ser vazio!';
                     }
                     if ($erro == "2") {
-                        $texto .= 'Nome de usuário não disponível!';
+                        $texto .= 'Nome de u suário não disponível!';
                     }
                     if ($erro == "3") {
                         $texto .= 'Email não disponível!';
